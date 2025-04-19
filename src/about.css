@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.Navbar {
+    width: 100%;
+    height: 10vh;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.a1,
+.a2,
+.a3,
+.a4 {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+.btn-box {
+    display: flex;
+    gap: 15px;
+}
+
+.btn-box button:nth-child(1) {
+    width: 100px;
+    height: 6vh;
+    font-weight: 600;
+    border: 2px solid #B777F3;
+    border-radius: 7px;
+}
+
+.btn-box button:nth-child(2) {
+    width: 100px;
+    height: 6vh;
+    font-weight: 600;
+    background-image: linear-gradient(#B777F3, #E689BC);
+    border: none;
+    border-radius: 7px;
+    color: white;
+}
+
+.menu {
+    font-size: 50px;
+    display: none;
+}
+
+.menu:hover {
+    cursor: pointer;
+}
+
+.side {
+    position: fixed;
+    top: 10%;
+    right: 0;
+    width: 280px;
+    height: 420px;
+    background-color: black;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    row-gap: 30px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.side.show {
+    transform: translateX(0%);
+}
+
+.side div {
+    text-align: right;
+}
+
+.side div span {
+    color: white;
+    font-size: 25px;
+}
+
+.side div span:hover {
+    cursor: pointer;
+}
+
+.side a {
+    color: white;
+    text-decoration: none;
+}
+
+.b1 {
+    width: 100px;
+    height: 6vh;
+    font-weight: 600;
+    border: 2px solid #B777F3;
+    border-radius: 7px;
+    margin-left: 30%;
+}
+
+.b2 {
+    width: 100px;
+    height: 6vh;
+    font-weight: 600;
+    background-image: linear-gradient(#B777F3, #E689BC);
+    border: none;
+    border-radius: 7px;
+    color: white;
+    margin-left: 30%;
+}
+
+@media screen and (max-width:980px) and (min-width:320px) {
+    .menu {
+        display: block;
+    }
+
+    .a-box {
+        display: none;
+    }
+
+    .Navbar {
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .btn-box {
+        display: none;
+    }
+
+    .a2,
+    .a3,
+    .a4 {
+        display: none;
+    }
+
+    .a1 {
+        font-size: 23px;
+    }
+}
+
+/* ================================================== */
+/* <!--------------------AboutHome------------------ */
+
+.about-home{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+}
+
+.about-home div{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+}
+
+.about-home div h1{
+    font-size: 60px;
+}
+
+.about-home div p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+@media screen and (max-width:980px) and (min-width:700px) {
+    .about-home div{
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:700px) and (min-width:500px) {
+    .about-home div{
+        left: 20px;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .about-home div{
+        left: 20px;
+    }
+    .about-home div h1{
+        font-size: 30px;
+    }
+    .about-home{
+        background-position-X: -297px !important;
+        background-repeat: no-repeat;
+    }
+}
+
+/* ======================================== */
+/* <!--------------about-div--------------> */
+
+.about-div{
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.about-box{
+    width: 80%;
+    height: 50vh;
+    background-color: white;
+    position: absolute;
+    top: -30px;
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.about-box img{
+    width: 500px;
+    height: 500px;
+    object-fit: contain;
+    position: relative;
+    top: -30px;
+}
+
+.about-box div h1{
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.about-box div p{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:980px) and (min-width:700px) {
+    .about-box div p{
+        font-size: 12px;
+    }
+    .about-box img{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width:700px) and (min-width:500px) {
+    .about-box div p{
+        font-size: 10px;
+    }
+    .about-box img{
+        width: 250px;
+        height: 250px;
+        top: 0;
+    }
+    .about-box{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:500px) and (min-width:320px) {
+    .about-box{
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+    .about-div div p{
+        font-size: 8px;
+        margin-top: 10px;
+    }
+    .about-div div h1{
+        margin-top: 0;
+        font-size: 20px;
+    }
+    .about-div img{
+        width: 150px;
+        height: 100px;
+        top: -30px;
+    }
+}
+
+/* ================================================= */
+/* <!--------------------about-theed---------------> */
+
+.about-theed{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt1{
+    width: 50%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt2{
+    width: 50%;
+    min-height: 100vh;
+    text-align: center;
+    padding: 20px;
+}
+
+.txt1 img{
+    width: 600px;
+    height: 600px;
+    object-fit: contain;
+}
+
+.txt-in{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.txt-in div{
+    width: 250px;
+    height: 130px;
+}
+
+.txt-in div h3 span{
+    color: green;
+    font-size: 30px;
+}
+
+.txt2 h1{
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+@media screen and (max-width:980px) and (min-width:700px) {
+    .txt-in div{
+        height: 70px;
+    }
+    .txt-in{
+        gap: 10px;
+    }
+    .txt1 img{
+        width: 400px;
+        height: 400px;
+    }
+    .txt2 h1{
+        font-size: 30px;
+    }
+    .txt-in div h3{
+        font-size: 15px;
+    }
+    .txt-in div h3 span{
+        font-size: 20px
+    };
+}
+
+@media screen and (max-width:700px) and (min-width:320px) {
+    .txt-in div{
+        height: 70px;
+    }
+    .txt-in{
+        gap: 20px;
+    }
+    .txt1 img{
+        width: 300px;
+        height: 300px;
+    }
+    .txt2 h1{
+        font-size: 30px;
+    }
+    .txt-in div h3{
+        font-size: 15px;
+    }
+    .txt-in div h3 span{
+        font-size: 20px
+    }
+    .about-theed{
+        flex-direction: column;
+    }
+    .txt1{
+        min-height: 60vh;
+        width: 100%;
+    }
+    .txt2{
+        width: 100%;
+        min-height: 75vh;
+    }
+}
+
+/* ============================================ */
+/* <!-----------------lastdiv------------------> */
+
+.last-div{
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.last-top{
+    width: 100%;
+    min-height: 30vh;
+    text-align: center;
+    padding: 30px;
+    padding-top: 50px;
+    align-content: center;
+}
+
+.last-top h1{
+    font-size: 40px;
+}
+
+.last-bottom{
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.xtx{
+    width: 270px;
+    height: 350px;
+    background-color: black;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.xtx img{
+    width: 200px;
+    height: 350px;
+    object-fit: contain;
+    transition: 1s;
+}
+
+.xtx:hover.xtx img{
+    transform: translateY(-70px);
+}
+
+.xtx div p{
+    color: white;
+    transition: 1s;
+}
+
+.xtx:hover.xtx div p{
+    transform: translateY(-70px);
+}
+
+.xtx:hover{
+    overflow: visible;
+}
+
+.xtx1{
+    background-color: #B777F3;
+}
+
+.xtx2{
+    background-color: #E689BC;
+}
+
+.xtx3{
+    background-color: rgb(219, 186, 37);
+}
+
+@media screen and (max-width:980px) and (min-width:320px) {
+    .last-bottom{
+        padding-bottom: 20px;
+    }
+}
